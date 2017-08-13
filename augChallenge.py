@@ -32,15 +32,10 @@ pornStarName = 'Fritz von Richthofen Helena'
 # slicing for filename
 domainOnly =  url.split('/')
 filterDomainOnly = domainOnly[0].split('.')
-if filterDomainOnly[-1] == 'org' or 'com':
-	# print (filterDomainOnly[-2])
-	ofilename = filterDomainOnly[-2]
+ofilename = filterDomainOnly[-2]
 
 os.chdir('.\datafolder')
 with open(ofilename + '.txt', 'w') as f:
 	answer = '%s\n%s\n%s\n%s' % (fcontents, titleString, modTime, pornStarName)
 	f.write(answer) 
-	# f.write(titleString + '\n')
-	# f.write(modTime + '\n')
-	# f.write(pornStarName)
 	f.close()
